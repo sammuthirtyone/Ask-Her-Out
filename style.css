@@ -3,7 +3,7 @@ const loopMessages = [
   "Are you sure? 😢",
   "Please nah 😔",
   "Plilise request 🥺",
-  "Okay now you can only say YES 🌷"
+  "Now you have to say YES 🌷"
 ];
 
 function nextPage(id) {
