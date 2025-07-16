@@ -1,49 +1,76 @@
-let currentLoop = 0;
-const loopMessages = [
-  "Are you sure? 😢",
-  "Please nah 😔",
-  "Plilise request 🥺",
-  "Now you have to say YES 🌷"
-];
-
-function nextPage(id) {
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("show"));
-  document.getElementById(id).classList.add("show");
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: #ffe4ec;
+  color: #ff2d55;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-function yesLove() {
-  nextPage("page5");
+.container {
+  padding: 50px 20px;
 }
 
-function noLove() {
-  currentLoop = 0;
-  document.getElementById("loopMsg").innerText = loopMessages[currentLoop];
-  nextPage("page4");
+h1, h2, p {
+  margin-bottom: 20px;
 }
 
-function nextLoop() {
-  currentLoop++;
-  if (currentLoop < loopMessages.length) {
-    document.getElementById("loopMsg").innerText = loopMessages[currentLoop];
-  } else {
-    nextPage("page5");
-  }
+img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-// Floating Hearts Generator
-function createHearts() {
-  const container = document.getElementById('heart-container');
-  setInterval(() => {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerText = "💖";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 10 + 15 + "px";
-    container.appendChild(heart);
-    setTimeout(() => heart.remove(), 10000);
-  }, 300);
+.btn {
+  display: inline-block;
+  background: #ffb6c1;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 15px;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
-window.onload = () => {
-  createHearts();
-};
+.btn:hover {
+  background: #ff69b4;
+}
+
+.hearts::before {
+  content: "💖 💕 💗 💓 💞";
+  position: fixed;
+  width: 100%;
+  bottom: -40px;
+  animation: float 5s infinite linear;
+  font-size: 2rem;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+.cute-bg {
+  background: linear-gradient(#ffecf2, #ffe6f7);
+}
+
+.proposal-bg {
+  background: linear-gradient(#fcd2e2, #fff0f5);
+}
+
+.final-bg {
+  background: url('https://media.giphy.com/media/3o7aCU0F0zkUvxWmGk/giphy.gif') center/cover no-repeat;
+  color: white;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
