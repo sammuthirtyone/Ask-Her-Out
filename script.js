@@ -14,6 +14,8 @@ body {
   min-height: 100vh;
   padding: 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .show {
@@ -58,6 +60,7 @@ button:hover {
   100% { transform: translateY(0); }
 }
 
+/* Floating Hearts */
 #heart-container {
   position: fixed;
   width: 100%;
@@ -67,6 +70,7 @@ button:hover {
   pointer-events: none;
   z-index: 0;
 }
+
 .heart {
   position: absolute;
   color: pink;
@@ -74,6 +78,7 @@ button:hover {
   animation: fly 10s linear infinite;
   opacity: 0.7;
 }
+
 @keyframes fly {
   0% {
     transform: translateY(100vh) scale(0.5);
