@@ -2,43 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For My Prashu 💖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For My Prashu 🌷</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container" id="page1">
-    <h1>Hi My Tulip 🌷</h1>
-    <p>You make everything in my world bloom 🌸<br>I made this for you, because you’re my forever girl 💖</p>
-    <img src="https://i.pinimg.com/originals/5d/fc/b5/5dfcb5f3ff23b0e7f219ce64fcf984f3.gif" alt="tulip gif">
-    <button onclick="startLove()">Click Me!</button>
+  <audio autoplay loop hidden>
+    <source src="https://dl.sndup.net/mv3z/cute%20love%20bg.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="heart-container"></div>
+
+  <!-- Page 1: Intro -->
+  <div class="page show" id="page1">
+    <h1>Hi My Prashu 🌷</h1>
+    <p>You make my world bloom in colors I never knew existed 💖</p>
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2VlbnN4NGx5NWU5emkwbjNqZmVqNTBtdG43bmVqbGlreXd1a245dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pOgBqWxxbnoKznz0Ll/giphy.gif" alt="Tulip">
+    <button onclick="nextPage('page2')">Click Me!</button>
   </div>
 
-  <div class="container hidden" id="page2">
-    <div class="hearts"></div>
-    <h2>🌷 My love for you grows like tulips in spring 🌷</h2>
-    <p class="float-msg">You’re my cupcake, my heart, my everything 🍰</p>
-    <p class="float-msg">Every moment with you is a petal of happiness 🌸</p>
-    <p class="float-msg">I’m blessed to love a flower like you 💞</p>
-    <button onclick="showProposal()">Will You?</button>
+  <!-- Page 2: Floating Love Messages -->
+  <div class="page" id="page2">
+    <h2>Love Message for Prashu 💌</h2>
+    <p class="float-msg">You're my tulip in a field of wildflowers 🌷</p>
+    <p class="float-msg">You're my cupcake, my angel, my baby 🧁</p>
+    <p class="float-msg">You are my once in a lifetime miracle 💫</p>
+    <p class="float-msg">I want to grow old with you 💍</p>
+    <button onclick="nextPage('page3')">Continue 💖</button>
   </div>
 
-  <div class="container hidden" id="proposal">
-    <h2>Will you be forever with me? 💍</h2>
-    <button onclick="yesLove()">Yes 💖</button>
+  <!-- Page 3: Proposal -->
+  <div class="page" id="page3">
+    <h2>Will you be forever with me? 🥺💍</h2>
+    <button onclick="yesLove()">Yes 💕</button>
     <button onclick="noLove()">No 😢</button>
   </div>
 
-  <div class="container hidden" id="loop">
-    <h2 id="loopMsg">Are you sure?</h2>
+  <!-- Page 4: No Button Loop -->
+  <div class="page" id="page4">
+    <h2 id="loopMsg">Are you sure? 😢</h2>
     <button onclick="nextLoop()">...</button>
   </div>
 
-  <div class="container hidden" id="final">
-    <h2>YAAAAYYYY!!!! 🥳🌷</h2>
-    <p>Prashu, you’ve made my world bloom forever 💖</p>
-    <img src="https://media1.giphy.com/media/XJXaDE9z3Xw1y/giphy.gif" alt="happy tulips gif">
-    <p>You’re the love of my life, my forever tulip 🌷💍</p>
+  <!-- Page 5: Final YES -->
+  <div class="page" id="page5">
+    <h2>YAYYY!! You said YES!!! 💖🌷</h2>
+    <p>I'm the luckiest human alive because of YOU, my prashu 🌷</p>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3k4c3Nrd3c4ZXFja2p2NWVpY3J3b2N3anl4Nmt0OTJzdWd5MDliYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QDVRtezEHN3PgiI/giphy.gif" alt="Happy gif">
+    <p>Forever starts now... 💍✨</p>
   </div>
 
   <script src="script.js"></script>
